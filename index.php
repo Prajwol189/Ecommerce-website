@@ -201,6 +201,9 @@
         </div>
         <!-- End of Swiper Container -->
     </div>
+    <div>
+        <p>asdf ghj  jl;kprajowjlaksdf</p>
+    </div>
     <!-- End of Container for Best Selling Section -->
 </section>
 
