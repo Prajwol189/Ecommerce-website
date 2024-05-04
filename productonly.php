@@ -17,6 +17,25 @@ if (isset($_GET['product_id'])) {
 }
 ?>
 
+<style>
+  .desc-span{
+    line-height: 170%;
+    font-size: 18px;
+  }
+
+  .product-name{
+    font-size: 32px;
+  }
+
+  .product-desc-div{
+    margin-top: 20px;
+    padding:  20px;
+    box-shadow: 5px 5px 20px 5px #598e3a2e;
+    border-radius: 5px;
+  }
+  
+</style>
+
 
 <?php include('layout/header.php');?>
 
@@ -44,22 +63,30 @@ if (isset($_GET['product_id'])) {
                 </div>
             </div>
             <div class="col-lg-6 col-sm-12 col-12">
-                <h6>Hairoil/medicines</h6>
-                <h3 class="py--4"><?php echo $row['product_name']; ?></h3>
-                <h2><?php echo $row['product_price']; ?></h2>
-              <form method="POST" action="cart.php">
-                
-                <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>" />
-                <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>" />
-                <input type="hidden" name="product_name"  value="<?php echo $row['product_name']; ?>" />
-                <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>" />
+                <h6>Hairoil / Medicines</h6>
+                <h3 class="product-name"><?php echo $row['product_name']; ?></h3>
+                <h4 class="mt-2">Rs <?php echo $row['product_price']; ?></h2>
+                <form method="POST" action="cart.php">
+                  
+                  <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>" />
+                  <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>" />
+                  <input type="hidden" name="product_name"  value="<?php echo $row['product_name']; ?>" />
+                  <div class="product-desc-div">
 
-                <input type="number" name="product_quantity" value="1"/>
-                <button class="buy-btn" type="submit" name="add_to_cart">Add to cart</button>
-  
+                    <div>
+                      <h4 >Product detail</h4>
+                      <span class="mb-4 desc-span" ><?php echo $row['product_description']; ?></span>
+                    </div>
+                    
+                  
+                    <input class="mt-1 product-on" type="number" name="product_quantity" value="1"/>
+                    
+                    <button class="mt-1" class="buy-btn" type="submit" name="add_to_cart">Add to cart</button>
+                    
+                    <input class="mt-4" type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>" />
+                  </div>
               </form>
-                <h4 class="mt-5 mb-5">Product detail</h4>
-                <span><?php echo $row['product_description']; ?></span>
+               
             </div>
             
         </div>   

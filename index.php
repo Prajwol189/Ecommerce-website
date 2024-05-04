@@ -34,20 +34,14 @@
                 <!-- Slide 1 -->
                 <div class="swiper-slide" id="home">
                     <div class="container" style="color: #8B4513;">
-                        <h5>Herbal medicines and product</h5>
-                        <h1>Best Price</h1>
-                        <p>Harmony in Nature, Healing in Ayurveda</p>
-                        <button>Buy now</button>
+                   
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="swiper-slide" id="home">
+                <div class="swiper-slide" id="home2">
                     <div class="container" style="color: #8B4513;">
-                        <h5>Herbal medicines and product and ajfsajfskfj</h5>
-                        <h1>Best Price</h1>
-                        <p>Harmony in Nature, Healing in Ayurveda</p>
-                        <button>Buy now</button>
+                      
                     </div>
                 </div>
             </div>
@@ -55,6 +49,7 @@
             <!-- Navigation Buttons -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
+             <div class="swiper-pagination"></div>
         </div>
         <!-- End of Swiper Container -->
     </section>
@@ -201,9 +196,7 @@
         </div>
         <!-- End of Swiper Container -->
     </div>
-    <div>
-        <p>asdf ghj  jl;kprajowjlaksdf</p>
-    </div>
+
     <!-- End of Container for Best Selling Section -->
 </section>
 
@@ -212,6 +205,32 @@
 
     <!-- JavaScript for Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script>
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
 
 <script>
     var swiperFeature = new Swiper("#feature .swiper", {

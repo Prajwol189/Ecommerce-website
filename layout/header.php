@@ -85,7 +85,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="nav-buttons align-items-center" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-content mb-2 mb-lg-0 gap-3">
+                <ul class="navbar-nav nav-content mb-2 mb-lg-0 gap-4">
                     <li class="nav-item">
                         <a class="nav-link new-nav-link" href="index.php">Home</a>
                     </li>

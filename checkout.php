@@ -1,9 +1,11 @@
 
 
-<?php include('layout/header.php');?>
+<?php
+  session_start();
+
+include('layout/header.php');?>
 <?php
 
-  session_start();
   //let user in
   if(!empty($_SESSION['cart'])){
 
@@ -60,7 +62,7 @@
                                 <input type="text" class="form-control" id="checkout-address" name="address" placeholder="address" required/>
                             </div>
                             <div class="form-group checkout-btn-container">
-                                <p>Total Amount: Rs <?php echo $_SESSION['total']; ?></p>
+                                <p>Total Amount: Rs <?php echo  $_SESSION['total']; ?></p>
                                 <input type="submit" class="btn" id="checkout-btn" name="place_order" value="Place Order"/>
                                 <input type="submit" class="btn" id="checkout-btn" name="cod" value="Cash on Delivery"/>
                             </div>

@@ -34,15 +34,14 @@ if(isset($_POST['place_order'])){
             $name=$_SESSION['user_name'];
             // $email=$_POST['email'];
             $phone=$_POST['phone'];
-            $city=$_POST['city'];
             $address=$_POST['address'];
             $order_cost=$_SESSION["total"];
             $order_status="not paid";
             $user_id=$_SESSION['user_id'];
             $order_date= date('Y-m-d H:i:s', time());
-            $stmt = $conn->prepare("INSERT INTO orders (user_name,order_cost, order_status, user_id, user_phone, user_city, user_address, order_date)
-            VALUES (?,?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param('sisissss',$name,$order_cost,$order_status,$user_id,$phone, $city,$address, $order_date );
+            $stmt = $conn->prepare("INSERT INTO orders (user_name,order_cost, order_status, user_id, user_phone, user_address, order_date)
+            VALUES (?,?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param('sisisss',$name,$order_cost,$order_status,$user_id,$phone,$address, $order_date );
             $stmt_status=$stmt->execute();
             if(!$stmt_status){
               header('location: index.php');

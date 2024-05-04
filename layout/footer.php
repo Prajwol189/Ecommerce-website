@@ -144,22 +144,6 @@
         </ul>
       </div>
       <div class="footer-item">
-      <h2 style="border-bottom: 1px solid black; grid-column: span 2; color:#222">Subscribe our newsletter</h2>
-        <form>
-          <input type="email" placeholder="Enter your email id" />
-          <button type="submit">Subscribe</button>
-        </form>
-
-        <div>
-        <h2 style="border-bottom: 1px solid black; grid-column: span 2; color:#222; margin-top:100px">Follow us</h2>
-        <ul class="social-media">
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-        </ul>
-
-        </div>
-      </div>
-      <div class="footer-item">
       <h2 style="border-bottom: 1px solid black; grid-column: span 2; color:#222 ">Contact Us</h2>
         <ul>
           <li style="display:flex; gap:10px; align-items:center;"><span><i class="fa-solid fa-phone"></i></span><span>9812345678</span></li>
@@ -167,9 +151,11 @@
           <li style="display:flex; gap:10px; align-items:center;"><span><i class="fa-solid fa-location-dot"></i></span><span>Naxal, Kathmandu</span></li>
           <li style="display:flex; gap:10px; align-items:center;"><span><i class="fa-regular fa-envelope"></i></span><span>rishi@gmail.com</span></li>
         </ul>
-      
-
       </div>
+      <div class="footer-item">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d582.8756068646027!2d85.31532860830018!3d27.717118027403618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb191d2a36c0d7%3A0x186372d697a505f6!2z4KSL4KS34KS_IOCkhuCkr-ClgeCksOCljeCkteClh-CkpiDgpJrgpL_gpJXgpL_gpKTgpY3gpLjgpL4g4KSq4KS44KSy!5e0!3m2!1sne!2snp!4v1714381735837!5m2!1sne!2snp" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
 
     </div>
     <div class="footer-copyright">

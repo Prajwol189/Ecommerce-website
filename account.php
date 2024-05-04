@@ -59,10 +59,10 @@ $orders = $stmt->get_result();//array
         <div class="row">
             <!-- Left Section -->
             <div class="mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
-                <p class="text-center" style="color:green"><?php if(isset($_GET['register_sucess'])){echo $_GET['register_sucess'];} ?></p>
-                <p class="text-center" style="color:green"><?php if(isset($_GET['login_sucess'])){echo $_GET['login_sucess'];} ?></p>
+                <!-- <p class="text-center" style="color:green"><?php if(isset($_GET['register_sucess'])){echo $_GET['register_sucess'];} ?></p> -->
+                <!-- <p class="text-center" style="color:green"><?php if(isset($_GET['login_sucess'])){echo $_GET['login_sucess'];} ?></p> -->
 
-                <h3>Account</h3>
+                <h3 class="heading-account">Your Account</h3>
                 <hr class="mx-auto">
                 <div class="account-info">
                     <p><span>Name:</span> <?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}?></p>
@@ -74,14 +74,15 @@ $orders = $stmt->get_result();//array
 
             <!-- Right Section -->
             <div class="text-center mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
-                <p class="text-center" style="color:green"><?php if(isset($_GET['register_sucess'])){echo $_GET['register_sucess'];} ?></p>
+                <!-- <p class="text-center" style="color:green"><?php if(isset($_GET['register_sucess'])){echo $_GET['register_sucess'];} ?></p>
                 <p class="text-center" style="color:green"><?php if(isset($_GET['login_sucess'])){echo $_GET['login_sucess'];} ?></p>
 
                 <h3>Account</h3>
-                <hr class="mx-auto">
+                <!-- <hr class="mx-auto">
                 <div class="account-info">
-                    <p><span>Name:</span> <?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}?></p>
-                    <p><span>Email:</span> <?php if(isset($_SESSION['user_email'])) { echo $_SESSION['user_email']; } ?></p>
+                    <!-- <p><span>Name:</span> <?php if(isset($_SESSION['user_name'])){echo $_SESSION['user_name'];}?></p>
+                    <p><span>Email:</span> <?php if(isset($_SESSION['user_email'])) { echo $_SESSION['user_email']; } ?></p> --> 
+                     
                 
                 </div>
             </div>

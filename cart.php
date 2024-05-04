@@ -1,4 +1,63 @@
 
+<style>
+
+.total-content{
+  width: 1000px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+  .boldtext{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .subtotal-heading{
+    text-align: left;
+    width: 300px;
+  padding: 5px;
+  background-color: green;
+  color: #ffffff;
+  }
+
+
+.checkout-container{
+  width: 300px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+
+}
+
+.checkout-btn{
+  width: 100%;
+}
+
+.cart-total{
+  display:flex;
+  flex-direction: column;
+  margin-top: 80px;
+  /* width: 1000px; */
+  justify-content: flex-end;
+  /* border: 1px solid black; */
+
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .cart-table{
+    width: 1000px !important;
+   
+  }
+</style>
+
 <?php 
 session_start();
 include('layout/header.php');?>
@@ -106,11 +165,12 @@ calculateTotalCart();
             <hr>
         </div>
 
-          <table class="mt-5 pt-5">
+          <table class="mt-5 pt-5 cart-table">
             <tr>
                 <th>Product</th>
                 <th>Quantity</th>
                 <th>Subtotal</th>
+                <th></th>
             </tr>
             <?php if(isset($_SESSION["cart"])){?>
             <?php foreach($_SESSION['cart'] as $key => $value){ ?>
@@ -122,11 +182,7 @@ calculateTotalCart();
                         <p><?php echo $value['product_name'];?></p>
                         <small><?php echo $value['product_price'];?></small>
                         <br>
-                        <form method="POST" action="cart.php">
-                          <input type="hidden" name="product_id"  value="<?php echo $value['product_id'];?>"/>
-
-                          <input type="submit" name="remove_product" class="remove-btn" value="remove"/>
-                        </form>                   
+                                         
                         </div> 
                 </div>
             </td>
@@ -141,33 +197,42 @@ calculateTotalCart();
 
             </td>
             <td>
-                <span>rs</span>
+                <span>Rs. </span>
                 <span class="product-price"><?php echo $value['product_quantity']*  $value['product_price']?></span>
             </td>
+                <td>
+                <form method="POST" action="cart.php">
+                          <input type="hidden" name="product_id"  value="<?php echo $value['product_id'];?>"/>
+
+                          <input type="submit" name="remove_product" class="remove-btn" value="remove"/>
+                        </form> 
+                </td>
             </tr>
            <?php } ?>
            <?php } ?>
            
         </table>
-        
-            <div class="cart-total">
-                <table>
-              
-                    
-                    <tr>
-                        <td>total</td>
-                        <?php  if(isset($_SESSION['cart'])) {?>
-                        <td>rs<?php echo $_SESSION['total'];?></td>
-                          <?php } ?>
-                      </tr>
-                </table>
+
+<div class="total-content">
+
+  <div class="cart-total">
+    
+    <div class="subtotal-heading">Sub Total</div>
+    <div class="checkout-container">
+                <?php  if(isset($_SESSION['cart'])) {?>
+                  <span class="boldtext">Total: Rs.<?php echo $_SESSION['total'];?></span>
+                  <?php } ?>
+                </tr>
+                
+                
+                
+                <form method="POST" action="checkout.php" class="checkout-container">
+                  <input type="submit" class="btn checkout-btn" value="Checkout" name="checkout">
+                </form>  
+                
+              </div>
             </div>
-            <div class="checkout-container">
-              <form method="POST" action="checkout.php">
-                <input type="submit" class="btn checkout-btn" value="Checkout" name="checkout">
-            </div>
-    </form>  
-        </div>
+          </div>
       </section>
 
 
